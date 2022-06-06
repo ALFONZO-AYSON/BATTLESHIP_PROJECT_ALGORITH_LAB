@@ -68,7 +68,7 @@ int main(){
 		cout << "\n\nPlayer GuessBoard:" << endl << endl;
 		displayBoard(p_GuessBoard);
 		cout << "\n\nComputer Board:" << endl << endl;
-		displayBoard(com_Board);
+		//displayBoard(com_Board);
 		//Player's Turn
 		hit = AttackPhase(thisPlayer, thisPlayer);
 		if (winTracker(p_GuessBoard) == true){
@@ -81,7 +81,7 @@ int main(){
 				cout << "Player GuessBoard:" << endl << endl;
 				displayBoard(p_GuessBoard);
 				cout << "Computer Board:" << endl << endl;
-				displayBoard(com_Board);
+				//displayBoard(com_Board);
 				hit = AttackPhase(thisPlayer, thisPlayer);
 				if (winTracker(p_GuessBoard) == true){
 					cout << "Player win, CPU lost..." << endl;
