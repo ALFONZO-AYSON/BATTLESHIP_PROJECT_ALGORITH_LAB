@@ -53,7 +53,6 @@ int main(){
 	//initialization of player guessing boards
 	createBoard(p_GuessBoard);
 	createBoard(player_Board);
-	displayBoard(player_Board);
 	createBoard(c_GuessBoard);
 	createBoard(com_Board);
 	//insert function for placing ships for both players then display player guess board and maybe opponent's guess board
@@ -67,8 +66,8 @@ int main(){
 		displayBoard(c_GuessBoard);
 		cout << "\n\nPlayer GuessBoard:" << endl << endl;
 		displayBoard(p_GuessBoard);
-		cout << "\n\nComputer Board:" << endl << endl;
-		//displayBoard(com_Board);
+		/*cout << "\n\nComputer Board:" << endl << endl;
+		displayBoard(com_Board); only for recording and testing purposes*/
 		//Player's Turn
 		hit = AttackPhase(thisPlayer, thisPlayer);
 		if (winTracker(p_GuessBoard) == true){
@@ -78,10 +77,12 @@ int main(){
 		if(hit == true){
 			while(hit == true){ //while loop if player got a hit
 				system("CLS");
-				cout << "Player GuessBoard:" << endl << endl;
+				cout << "Computer GuessBoard:" << endl << endl;
+				displayBoard(c_GuessBoard);
+				cout << "\n\nPlayer GuessBoard:" << endl << endl;
 				displayBoard(p_GuessBoard);
-				cout << "Computer Board:" << endl << endl;
-				//displayBoard(com_Board);
+				/*cout << "\n\nComputer Board:" << endl << endl;
+				displayBoard(com_Board); only for recording and testing purposes*/
 				hit = AttackPhase(thisPlayer, thisPlayer);
 				if (winTracker(p_GuessBoard) == true){
 					cout << "Player win, CPU lost..." << endl;
