@@ -17,10 +17,7 @@ const char checkMiss = 'O';
 
 //Boards
 char p_GuessBoard[BOARD_SIZE][BOARD_SIZE];
-char player_Board[BOARD_SIZE][BOARD_SIZE];	/*Note:Board char array can be made as a local variable to main(), 
-											*if so pass the board as an argument to the display and create functions, 
-											*add a parameter as well to said functions
-											*/
+char player_Board[BOARD_SIZE][BOARD_SIZE];
 char c_GuessBoard[BOARD_SIZE][BOARD_SIZE];
 char com_Board[BOARD_SIZE][BOARD_SIZE];							
 
@@ -53,6 +50,7 @@ int main(){
 	//initialization of player guessing boards
 	createBoard(p_GuessBoard);
 	createBoard(player_Board);
+	displayBoard(player_Board);
 	createBoard(c_GuessBoard);
 	createBoard(com_Board);
 	//insert function for placing ships for both players then display player guess board and maybe opponent's guess board
