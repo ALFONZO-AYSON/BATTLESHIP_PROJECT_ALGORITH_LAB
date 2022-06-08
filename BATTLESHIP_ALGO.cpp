@@ -198,18 +198,7 @@ void userInput(int &row, int &col){
 	while (true){
 		cout << "Please enter column coordinate (A-J): ";
 		cin >> inCol;
-		/*if(inCol.length() > 1 || numChecker(inCol) == true){
-			while(inCol.length() > 1 || numChecker(inCol) == true){
-				cout << "Please enter only ONE letter in the range of (A-J) for the column coordinate: ";
-				cin >> inColStr;
-				if(numChecker(inCol) == false && inCol.length() == 1){
-					break;
-				}
-			}
-		}*/
-		//strcpy(inColArr, inColStr.c_str());
 		inCol = toupper(inCol);
-		//inCol = toupper(inCol);
 		if (inCol >= 'A' && inCol <= 'J'){
 		    for (int x = 0; x < 10; x++){
 		        if(colArr[x] == inCol){
